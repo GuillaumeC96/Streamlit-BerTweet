@@ -1,0 +1,13 @@
+# Secrets et fichiers de configuration sensibles
+.streamlit/secrets.toml
+*.log
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+.venv/
+.DS_Store
