@@ -39,7 +39,7 @@ Dans les **Advanced settings**, ajoutez vos secrets dans la section **Secrets** 
 
 ```toml
 # URL de votre API AWS EC2
-API_URL = "http://56.228.32.239:8000"
+API_URL = "http://56.228.68.157:8000"
 
 # Configuration AWS (optionnel)
 AWS_REGION = "eu-north-1"
@@ -49,7 +49,7 @@ SNS_TOPIC_ARN = "arn:aws:sns:eu-north-1:401399516096:twitter-sentiment-alerts"
 ```
 
 **⚠️ IMPORTANT** :
-- Remplacez `56.228.32.239` par l'IP actuelle de votre instance EC2
+- Remplacez `56.228.68.157` par l'IP actuelle de votre instance EC2
 - Pour une IP fixe, utilisez une **Elastic IP** sur AWS
 - Les credentials AWS sont optionnels (seulement pour CloudWatch/SNS)
 
@@ -89,7 +89,7 @@ nano .streamlit/secrets.toml
 
 ```bash
 # Définir l'URL de l'API (alternative aux secrets)
-export API_URL="http://56.228.32.239:8000"
+export API_URL="http://56.228.68.157:8000"
 
 # Lancer Streamlit
 streamlit run app.py
@@ -111,7 +111,7 @@ L'interface sera accessible à : http://localhost:8501
                        ▼
 ┌─────────────────────────────────────────────────────────┐
 │              API FASTAPI (AWS EC2)                       │
-│              (IP: 56.228.32.239:8000)                   │
+│              (IP: 56.228.68.157:8000)                   │
 │  • Modèle BERTweet ONNX (515 MB)                       │
 │  • Inférence CPU (~165ms)                               │
 │  • Endpoints REST                                       │
@@ -152,7 +152,7 @@ L'interface sera accessible à : http://localhost:8501
 Sur Streamlit Cloud, ajoutez ces valeurs dans **Settings → Secrets** :
 
 ```toml
-API_URL = "http://56.228.32.239:8000"
+API_URL = "http://56.228.68.157:8000"
 ```
 
 ## 🧪 Tests
@@ -186,7 +186,7 @@ L'API backend doit être déployée séparément sur AWS EC2.
 
 ### Documentation Swagger
 
-Disponible à : http://56.228.32.239:8000/docs
+Disponible à : http://56.228.68.157:8000/docs
 
 ## 🔐 Sécurité
 
@@ -209,7 +209,7 @@ Disponible à : http://56.228.32.239:8000/docs
 **Cause** : L'API n'est pas accessible
 
 **Solution** :
-1. Vérifiez que l'API est en ligne : `curl http://56.228.32.239:8000/health`
+1. Vérifiez que l'API est en ligne : `curl http://56.228.68.157:8000/health`
 2. Vérifiez que le port 8000 est ouvert dans le Security Group AWS
 3. Vérifiez l'URL dans les secrets Streamlit
 
